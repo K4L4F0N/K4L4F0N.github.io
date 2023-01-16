@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Open+Sans:wght@300&display=swap');
+
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bakbak One', cursive;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(111,190,207,1) 100%);
+    /* OVE TRI KOMANDE SU NAJBITNIJE KOD PRAVLJENJA RESPONSIVA ZA CEO SAJT */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* OVE 4 KOMANDE SU TAKODJE BITNE */
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(111,190,207,1) 100%);
+}
+
+/* Image Reset */
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: block;
+}
+
+header h1 {
+    background-color: #d4535f;
+    text-align: center;
+    color: black;
+}
+
+.clients :is(q) {
+    font-size: 1.2rem;
+}
+
+.navbar {
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    border-bottom: 2px solid black;
+    height: 50px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-inline: 5px;
+    padding: 5px;
+}
+
+.clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-flow: row wrap;
+}
+
+.clients :is(.client1, .client2, .client3) {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-inline: 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    background-color: white;
+}
+
+.clients :is(.client1 img, .client2 img, .client3 img) {
+    border-radius: 50%;
+    border: 2px solid gray;
+    height: auto;
+    max-width: 100%;
+}
+
+figure {
+    padding: 20px 20px 0 20px;
+}
+
+.recommendation {
+    white-space: normal;
+}
+
+footer {
+    text-align: center;
+    background-color: #d4535f;
+    color: black;
+    font-size: 0.7rem;
+    border-top: 2px solid black;
+    position: sticky;
+    bottom: 0;
+}
+
+.clients p {
+    font-size: 2rem;
+}
+
+figcaption {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+header :is(a:hover, a:focus) { /* Dont repeat yourself */
+    background-color: rgb(30, 32, 62);
+    color: white;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 415px) {
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1185px) {
+    .navbar {
+        display: none;
+    }
+
+    header {
+        height: auto;
+    }
+}
+
+/* MOBILE DEVICE LANDSCAPE */
+@media screen and (max-height: 576px) and (min-aspect-ratio: 7/4) {
+    .navbar {
+        display: none;
+    }
+
+    .client1, 
+    .client2,
+    .client3 {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        max-width: 250px;
+    }
+}
