@@ -109,8 +109,6 @@ footer {
     color: black;
     font-size: 0.7rem;
     border-top: 2px solid black;
-    position: sticky;
-    bottom: 0;
 }
 
 .clients p {
